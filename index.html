@@ -1,0 +1,11 @@
+<!doctype html>
+ {% extends "base.html" %}
+ {% block page_content %}
+ <h1>{% if led %}You have light on the led {{led}}{% else %}You don't{% endif %}!</h1>
+ <div class="page-content">
+	{{ wtf.quick_form }}
+	<form action="" method="post">
+		{{form.submit}}
+	</form>
+ </div>
+ {% endblock %}
